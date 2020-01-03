@@ -1,14 +1,12 @@
-FROM alpine:latest
+FROM python:3.6-alpine
 
 ENV GID=1000 UID=1000 ISSO_SETTINGS=/config/isso.conf
 
 RUN apk upgrade --update \
  && apk add -t build-dependencies \
-    python3-dev \
     libffi-dev \
     build-base \
  && apk add \
-    python3 \
     sqlite \
     openssl \
     ca-certificates \
