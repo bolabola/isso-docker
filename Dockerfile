@@ -19,4 +19,4 @@ VOLUME /config /db
 
 EXPOSE 8080
 
-CMD /usr/bin/gunicorn -k gevent -b 0.0.0.0:8080 -w 4 --preload isso.run
+CMD gunicorn -k gevent -b 0.0.0.0:8080 -w 4 --preload isso.run
